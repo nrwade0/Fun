@@ -55,7 +55,7 @@ for i=2:n-1 % cycle through each column
             if(neighbors >= 4) % Rule two: 4 or more neighbors - dies of overpopulation
                grid(i,j) = 0
             end
-            % Rule three: 2 or 3 neighbors - survives
+            % Rule three: 2 or 3 neighbors - survives 
                     
         else % cell is unpopulated
             if(neighbors == 3) % Rules four: 3 or more neighbors - grows by expansion
