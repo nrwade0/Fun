@@ -13,12 +13,9 @@ grid(21,8) = 1;
 grid(20,9) = 1;
 grid(22,8) = 1
 
-pause on
-
 for i=2:n-1 % cycle through each column
     for j=2:m-1 % cylce through each row
-        pause
-        
+    
         % count the number of cells around it
         neighbors = 0;
         %pop = grid(i-1,j-1)
