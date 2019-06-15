@@ -1,10 +1,10 @@
 # Repository for programming projects made for fun.
 
-Hierarchy: Spring 2019 NASA internship side project creating an interactive hierarchy display support for aerospace engineering in a MATLAB GUI.
+Hierarchy: Spring 2019 NASA internship side project creating an interactive aerospace engineering hierarchy display support in a MATLAB GUI.
 
 Files are generally unrelated
 
-- Python 3.7
-- MATLAB r2018a
+- Python
+- MATLAB
 - Java
-- FORTRAN 95
+- FORTRAN
