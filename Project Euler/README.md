@@ -2,4 +2,4 @@
 
 Prompts: https://projecteuler.net/archives
 
-Solutions in either MATLAB (.m) or Python .py
+Solutions in either MATLAB (.m) or Python (.py)
