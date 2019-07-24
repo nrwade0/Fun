@@ -1,10 +1,14 @@
-# Repository for programming projects made for fun.
+# Repository for fun projects
 
-Hierarchy: Spring 2019 NASA internship side project creating an interactive aerospace engineering hierarchy display support in a MATLAB GUI.
+# Hierarchy
 
-Project Euler: My implementations to find answers in Project Euler using MATLAB and Python. https://projecteuler.net/about
+Spring 2019 NASA internship side project creating an interactive aerospace engineering hierarchy display support in a MATLAB GUI.
 
-Codegolf: My implementations to popular codegolf programs (as small as possible) using Python. https://codegolf.stackexchange.com/users/86847/nick?tab=favorites
+# Project Euler 
+My implementations of Project Euler problems using MATLAB and Python. https://projecteuler.net/about
+
+# Codegolf
+My implementations of popular codegolf programs (as small as possible) using Python. https://codegolf.stackexchange.com/users/86847/nick?tab=favorites
 
 matlab/python: Extra projects based on either language.
 
