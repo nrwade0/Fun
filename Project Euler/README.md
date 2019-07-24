@@ -3,3 +3,6 @@
 Prompts: https://projecteuler.net/archives
 
 Solutions in either MATLAB (.m) or Python (.py)
+
+To-do:
+- Rename files to just problem number
