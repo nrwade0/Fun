@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Project Euler problem 25
+Project Euler problem 13
 
 Work out the first ten digits of the sum of the one-hundred 50-digit numbers 
  found in the accompanying text file PE13_data.txt.
@@ -8,7 +8,7 @@ Work out the first ten digits of the sum of the one-hundred 50-digit numbers
 """
 
 # open text file containing values
-f = open('PE13_data.txt', 'r') 
+f = open('13_data.txt', 'r') 
 
 # intialize list to hold values
 lines = []
