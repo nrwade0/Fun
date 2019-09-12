@@ -1,22 +1,24 @@
-# Repository for fun projects
-
-# Hierarchy
-
-Spring 2019 NASA internship side project creating an interactive aerospace engineering hierarchy display support in a MATLAB GUI.
-# NASA Internship - Spring 2019
-
-Side project with Jim Luckring developing an interactive hierarchy display that supports a NATO aeronautics mission. The project was continued after this May 1st release.
-
-# Project Euler
-My implementations of Project Euler problems using MATLAB and Python. https://projecteuler.net/about
-
-# codegolf
-
-Implementations of interesting codegolf questions. No particular effort for length or efficiency. Just looking to solve problems.
-
-[link](https://codegolf.stackexchange.com)
+# Repository for side projects
 
 
-matlab/python: Extra projects based on either language.
+## Hierarchy
 
-Files are generally unrelated
+Spring 2019 NASA internship side project creating an interactive aerospace engineering hierarchy display support in a MATLAB GUI. The project was continued after this version (May 1st, 2019).
+
+Files include
+- SSPV_v2.m
+- SSPV_RUN_v2.m
+
+
+## CodeGolf
+
+Implementations of interesting codegolf questions. No particular effort for length or efficiency. Just looking to solve problems. [link](https://codegolf.stackexchange.com)
+
+Files include
+- alien_translator.py
+
+Misc. files
+| File name      | Purpose                                  | Current issues                                                |
+| -------------- | ---------------------------------------- | ------------------------------------------------------------- |
+| sudoku.py      | Solves Sudoku puzzles                    | Cannot handle 'nice loops.' Would benefit from a GUI too.     |
+| health.py      | Extracts data from Apple's health app    | Doesn't take data from a specific time period (.xml files)    |
