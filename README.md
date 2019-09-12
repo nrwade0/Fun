@@ -18,6 +18,7 @@ Files include
 - alien_translator.py
 
 Misc. files
+
 | File name      | Purpose                                  | Current issues                                                |
 | -------------- | ---------------------------------------- | ------------------------------------------------------------- |
 | sudoku.py      | Solves Sudoku puzzles                    | Cannot handle 'nice loops.' Would benefit from a GUI too.     |
