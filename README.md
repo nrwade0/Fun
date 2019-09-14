@@ -7,7 +7,7 @@ Implementations of interesting codegolf questions. No particular effort for leng
 
 | File name            | Result                                                                                              |
 | -------------------- | --------------------------------------------------------------------------------------------------- |
-| alien_translator.py  | ## bytes:  [link](https://codegolf.stackexchange.com/questions/93473/english-to-alien-translator/93574#93574)      
+| alien_translator.py  | ## bytes:  [link](https://codegolf.stackexchange.com/questions/93473/english-to-alien-translator/93574)      
 
 
 
