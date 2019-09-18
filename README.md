@@ -28,14 +28,16 @@ Spring 2019 NASA internship side project creating an interactive aerospace engin
 | File name      | Purpose                                  | Current issues                                                |
 | -------------- | ---------------------------------------- | ------------------------------------------------------------- |
 | sudoku.py      | Solves Sudoku puzzles                    | Cannot handle 'nice loops.' Would benefit from a GUI too.     |
-| health.py      | Extracts data from Apple's health app    | Doesn't take data from a specific time period (.xml files).    |
+| health_data.py | Extracts data from Apple's health app    | Works well but inputting dates isn't easy.                    |
+| health_brooke_export.xml | Health app data for Brooke     | N/A                                                           |
+| health_nick_export.xml | Health app data for Nick.        | N/A                                                           |
 | gameoflife.m   | Attempt at Game of Life                  | Does not work - incomplete.                                   |
 
 
 
 ## Physics
 
-Code used to study for the physics GRE. [link](https://codegolf.stackexchange.com)
+Code used to study for the physics GRE. See Overleaf document.
 
 | File name                           | Purpose                                  | Current issues                            |
 | ----------------------------------- | ---------------------------------------- | ----------------------------------------- |
