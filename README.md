@@ -42,5 +42,7 @@ Code used to study for the physics GRE. See Overleaf document.
 | File name                           | Purpose                                  | Current issues                            |
 | ----------------------------------- | ---------------------------------------- | ----------------------------------------- |
 | double_pendulum.py                  | Simulation of double pendulum            | N/A                                       |
-| driven_damped_linear_oscillator.py  | Motion of an oscillator                 | N/A                                       |
-| oscillations_in_2d.py               | Motion of an oscillator                 | N/A                                       |
+| driven_damped_linear_oscillator.py  | Motion of an oscillator                  | N/A                                       |
+| oscillations_in_2d.py               | Motion of an oscillator                  | N/A                                       |
+| A_vs_w_resonance.py                 | Amplitude vs angular frequency example   | N/A                                       |
+
