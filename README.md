@@ -7,13 +7,13 @@ Implementations of interesting codegolf questions. No particular effort for leng
 
 | File name            | Result                                                                                              |
 | -------------------- | --------------------------------------------------------------------------------------------------- |
-| alien_translator.py  | ## bytes:  [link](https://codegolf.stackexchange.com/questions/93473/english-to-alien-translator/93574)      
+| alien_translator.py  | ## bytes:                                                                                           |
 
 
 
 ## Hierarchy
 
-Spring 2019 NASA internship side project creating an interactive aerospace engineering hierarchy display support in a MATLAB GUI. The project was continued after this version (May 1st, 2019).
+Spring 2019 NASA internship side project creating an interactive aerospace engineering hierarchy display support in a MATLAB GUI. The project was continued with further developments after this version (May 1st, 2019).
 
 | File name      | Purpose                                                  | Current issues                                 |
 | -------------- | -------------------------------------------------------- | ---------------------------------------------- |
@@ -32,6 +32,8 @@ Spring 2019 NASA internship side project creating an interactive aerospace engin
 | health_brooke_export.xml | Health app data for Brooke     | N/A                                                           |
 | health_nick_export.xml | Health app data for Nick.        | N/A                                                           |
 | gameoflife.m   | Attempt at Game of Life                  | Does not work - incomplete.                                   |
+| double_pendulum.py | python animation of double_pendulum motion | N/A                                                     |
+
 
 
 
@@ -41,8 +43,16 @@ Code used to study for the physics GRE. See Overleaf document.
 
 | File name                           | Purpose                                  | Current issues                            |
 | ----------------------------------- | ---------------------------------------- | ----------------------------------------- |
-| double_pendulum.py                  | Simulation of double pendulum            | N/A                                       |
-| driven_damped_linear_oscillator.py  | Motion of an oscillator                  | N/A                                       |
-| oscillations_in_2d.py               | Motion of an oscillator                  | N/A                                       |
+| **Mechanics** |
 | A_vs_w_resonance.py                 | Amplitude vs angular frequency example   | N/A                                       |
+| anisotropic_osc.py                  | Anisotropic oscillator example           | N/A                                       |
+| driven_damped_linear_oscillator.py  | Driven damped linear oscillator motion   | N/A                                       |
+| driven_damped_osc.py                | Driven damped oscillator motion          | N/A                                       |
+| ex_pendulum.py                      | Pendulum simple example                  | N/A                                       |
+| isotropic_osc.py                    | Isotropic oscillator example             | N/A                                       |
+| oscillations_in_2d.py               | Motion of an 2D oscillator               | N/A                                       |
+| strong_damped_osc.py                | Strongly dampened oscillator motion      | N/A                                       |
+| weak_damped_osc.py                  | Weakly dampened oscillator motion        | N/A                                       |
+| x_vs_E-SHO.py                       | Position vs. Energy in a simple harmonic oscillator | N/A                            |
+
 
