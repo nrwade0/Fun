@@ -7,7 +7,7 @@ Implementations of interesting codegolf questions. No particular effort for leng
 
 | File name            | Result                                                                                              |
 | -------------------- | --------------------------------------------------------------------------------------------------- |
-| alien_translator.py  | ## bytes:                                                                                           |
+| alien_translator.py  | ## bytes                                                                                           |
 
 
 
