@@ -7,7 +7,7 @@ Implementations of interesting codegolf questions. No particular effort for leng
 
 | File name            | Result                                                                                              |
 | -------------------- | --------------------------------------------------------------------------------------------------- |
-| alien_translator.py  | ## bytes                                                                                           |
+| alien_translator.py  | ## bytes                                                                                            |
 
 
 
@@ -54,5 +54,18 @@ Code used to study for the physics GRE. See Overleaf document.
 | strong_damped_osc.py                | Strongly dampened oscillator motion      | N/A                                       |
 | weak_damped_osc.py                  | Weakly dampened oscillator motion        | N/A                                       |
 | x_vs_E-SHO.py                       | Position vs. Energy in a simple harmonic oscillator | N/A                            |
+
+
+
+
+## UMD Challenge Box
+
+University of Maryland Lockheed Martin Challenge Box. Solved using Fortran. [link](https://challengebox.cs.umd.edu/2019/index.html)
+
+| File name            | Purpose                                 | Current Issues                                            |
+| -------------------- | --------------------------------------------------------------------------------------------------- |
+| **fancy-fence** |
+| file.f90                 | Amplitude vs angular frequency example   | N/A                                       |
+
 
 
