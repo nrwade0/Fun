@@ -60,12 +60,12 @@ Code used to study for the physics GRE. See Overleaf document.
 
 ## UMD Challenge Box
 
-University of Maryland Lockheed Martin Challenge Box. Solved using Fortran. [link](https://challengebox.cs.umd.edu/2019/index.html)
+University of Maryland Lockheed Martin Challenge Box. Solved using Fortran. [link](https://challengebox.cs.umd.edu/2019/index.html).
 
-| File name            | Purpose                                 | Current Issues                                            |
-| -------------------- | --------------------------------------------------------------------------------------------------- |
+| File name                           | Purpose                                  | Current issues                            |
+| ----------------------------------- | ---------------------------------------- | ----------------------------------------- |
 | **fancy-fence** |
-| file.f90                 | Amplitude vs angular frequency example   | N/A                                       |
-
+| file.f90                            | temp file                                | N/A                                       |
+| file2.f90                           | temp file                                | N/A                                       |
 
 
