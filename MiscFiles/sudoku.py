@@ -1,11 +1,6 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Thu Aug 15 01:01:11 2019
-
-@author: nick
+Sudoku puzzle solver
 """
-
 
 
 """
@@ -15,7 +10,6 @@ Finds the next cell to be evaluates (has a 0)
 def FindNextCell(grid):
     for row in range(9):
         for col in range(9):
-            #print(row, ',', col)
             if(grid[row][col] == 0):
                 return row, col
 
@@ -123,17 +117,17 @@ def PrintPuzzle(grid):
 
 
 
-grid = [[5,3,0, 0,7,0, 0,0,0], \
-        [6,0,0, 1,9,5, 0,0,0], \
-        [0,9,8, 0,0,0, 0,6,0], \
+grid = [[0,0,7, 0,0,0, 0,1,5], \
+        [0,0,0, 3,9,7, 0,0,0], \
+        [0,6,2, 0,1,0, 4,0,9], \
         \
-        [8,0,0, 0,6,0, 0,0,3], \
-        [4,0,0, 8,0,3, 0,0,1], \
-        [7,0,0, 0,2,0, 0,0,6], \
+        [0,2,0, 0,0,1, 5,4,3], \
+        [7,0,0, 4,0,9, 0,0,1], \
+        [4,8,1, 2,0,0, 0,6,0], \
         \
-        [0,6,0, 0,0,0, 2,8,0], \
-        [0,0,0, 4,1,9, 0,0,5], \
-        [0,0,0, 0,8,0, 0,7,9]]
+        [9,0,6, 0,2,0, 7,3,0], \
+        [0,0,0, 9,8,4, 0,0,0], \
+        [1,5,0, 0,0,0, 2,0,0]]
 
 print('Problem: ')
 PrintPuzzle(grid)
@@ -145,12 +139,10 @@ print('')
 for duh in range(100):    
     for row in range(9):
         for col in range(9):
-            #print('row = ', row, ' // col = ', col)
             if(grid[row][col] == 0):
                 grid = isValid(grid, row, col)
                 
-    #x,y = FindNextCell(grid)
-    #grid = isValid(grid, x, y)
+
 
 print('Solution: ')
 PrintPuzzle(grid)
