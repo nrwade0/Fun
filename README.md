@@ -57,6 +57,8 @@ Data science project analyzing data from iPhone health app - month in NYC
 
 ## Sudoku
 
-| File name      | Purpose               | Current issues                                            |
-| -------------- | ----------------------| --------------------------------------------------------- |
-| sudoku.py      | Solves Sudoku puzzles | Cannot handle 'nice loops.' Would benefit from a GUI too. |
+| File name   | Purpose                             | Current issues                                                |
+| ----------- | ------------------------------------| ------------------------------------------------------------- |
+| sudoku.py   | Solves easy Sudoku puzzles (python) | Cannot handle 'nice loops.' Would benefit from a GUI too.     |
+| sudoku.m    | Solves all Sudoku puzzles (matlab)  | Two-method solver (backtracking included), GUI for easier use |
+
