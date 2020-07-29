@@ -1,22 +1,20 @@
-%{
- Fancy fence
-
-Letting 'a' denote the number of horizontal and vertical fence segments, and
- letting 'b' denote the number of diagonal segments, the total length of
- the fence is a + b*sqrt(2). Write a program that inputs the tree coordinates
- and outputs the values 'a' and 'b'.
-
+%{ 
+   CHALLENGE 1 - FANCY FENCE
+Letting 'a' denote the number of horizontal and vertical fence segments, 
+    and letting 'b' denote the number of diagonal segments, the total 
+    length of the fence is a + b*sqrt(2). Write a program that inputs the 
+    tree coordinates and outputs the values 'a' and 'b'.
 %}
+
 
 format long g
 
-%{ 
-   Input text file
-    inputs coordinates of trees into 'points'  and number of trees into 'N'
-%}
-cd /Users/nick/Documents/GitHub/projects/UMDChallengeBox/fancy-fence
+%%%% ---- INPUT TEXT FILE ---- %%%%
+% inputs coordinates of trees into 'points' and number of trees into 'N'
+
+cd /Users/nick/Documents/GitHub/projects/Challenge/fancy-fence
 f = fopen('data/fence-challenge.in','r');    % challenge
-%f = fopen('data/fence-test2.in','r');      % test
+%f = fopen('data/fence-test2.in','r');       % test
 
 % get number of trees (N) and coordinates of those trees (points 2xN array)
 N = fscanf(f, '%d', 1);
@@ -27,27 +25,31 @@ fclose(f);
 
 
 
-%{ 
-   Convex hull algorithm - Graham Scan
-    Pseudocode and explanation found here:
-    https://en.wikipedia.org/wiki/Graham_scan
-%}
+%%%% ----- CONVEX HULL ALGORITHM: GRAHAM SCAN ----- %%%%
+%  Pseudocode and explanation found here:
+%   https://en.wikipedia.org/wiki/Graham_scan
 
+%%% --- STEP 1: find lowest coordinate p0 --- %%%
 % find lowest y-coordinate and leftmost point, called p0
-p0 = points(1,:); % initialize as first point
+p0 = points(1,:); % initialize p0 as first point
 
+% find lowest y-coordinate
 for i = 1:N
     if(points(i,2) < p0(1,2)) % lowest y-coordinate
         p0 = points(i,:);
     end
 end
 
+% get leftmost point at same y-coordinate
 for i = 1:N
-    % leftmost at same y-coord as current p0
-    if(points(i,2) == p0(1,2) && points(i,1) < p0(1,1))
+    if(points(i,2) == p0(1,2) && points(i,1) < p0(1,1)) % leftmost
         p0 = points(i,:);
     end
 end
+
+
+%%% --- STEP 2: sort points by polar angle with p0 --- %%%
+% if several points have the same polar angle then only keep the farthest
 
 % initialize polar angles and distance matrix, to be combined w/ points
 polars = zeros(N,2);
@@ -75,7 +77,8 @@ stack = points(:,1:2);
 % reset N and declare hull (our convex hull coordinates)
 N = N-1;
 
-% start Graham scan...
+
+%%% --- STEP 3: Graham Scan --- %%%
 for i = 1:N
     
     % current checked point declared
@@ -109,9 +112,11 @@ for i = 1:size(hull,1)-1
 end
 
 % show 'a' and 'b' and 'total_length' from prompt
-a = moves(1,1)
-b = moves(1,2)
-total_length = moves(1,1) + moves(1,2)*sqrt(2)
+a = moves(1,1);
+b = moves(1,2);
+total_length = moves(1,1) + moves(1,2)*sqrt(2);
+fprintf('a = %d, b = %d\n', a, b)
+fprintf('total_length = a + sqrt(b) -> %d + sqrt(%d) = %d',a, b, total_length)
 
 % write answer to txt file
 f_out = fopen('data/fence-challenge.out','w');
@@ -123,10 +128,12 @@ fprintf(f_out, 'a = %d, b = %d', a, b);
 fclose(f_out);
 
 
+
 % quick plot of garden with black trees, fence in red, p0 in blue
 hold on
 offset = mean(hull(:,:))/10;
 sz = 250;
+title("Fancy Fence Final")
 scatter(points(:,1), points(:,2), sz, 'k.')
 scatter(p0(1,1), p0(1,2), sz, 'b.')
 plot(hull(:,1), hull(:,2), 'r-')
@@ -138,9 +145,10 @@ hold off
 
 
 %{
-    Input: three points: p1, p2, p3, each a 1x2 array of coordinates
-    Outputs: positive: left turn, zero: colinear, positive: right turn 
-    Computes the orientation of the three points (which way they turn)
+   CCW(P1, P2, P3) = ORIENTATION
+ Computes the orientation of the three points (which way they turn)
+  Input: three points: p1, p2, p3, each a 1x2 array of coordinates
+  Outputs: positive: left turn, zero: colinear, positive: right turn 
 %}
 function o = ccw(p1, p2, p3)
     % For three points P1 = (x1,y1), P2 = (x2,y2) and P3 = (x3,y3), 
@@ -152,17 +160,17 @@ function o = ccw(p1, p2, p3)
     %   counter-clockwise orientation,
     % otherwise a "right turn" or clockwise orientation
     %   (for counter-clockwise numbered points).
-    
     o = (p2(1,1) - p1(1,1))*(p3(1,2) - p1(1,2)) - ...
         (p2(1,2) - p1(1,2))*(p3(1,1) - p1(1,1));
-    
 end
 
 
+
 %{
-    Input: two points: p1, p2, each a 1x2 array of coordinates
-    Outputs: 1x2 array moves of 'a' (left/right/up/down) and 'b' (diagonal)
-    computes the movements between two points as 'a' and 'b'
+   CALCULATE_MOVEMENT(P1,P2) = MOVES
+ Computes the movements between two points as 'a' and 'b'
+  Input: two points: p1, p2, each a 1x2 array of coordinates
+  Outputs: 1x2 array moves of 'a' (left/right/up/down) and 'b' (diagonal)
 %}
 function moves = calculate_movement(p1, p2)
     % determine x and y movements between the two points
