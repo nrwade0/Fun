@@ -3,9 +3,14 @@ University of Maryland Computer Science Northrop Grumman [Challenge Box](https:/
 
 
 ## fancy-fence
-Build smallest fence around a cluster of trees - [Convex hull](https://en.wikipedia.org/wiki/Convex_hull) algorithm.
+Build smallest fence around a cluster of trees - [Convex hull](https://en.wikipedia.org/wiki/Convex_hull) algorithm. The input and output files can be found [here](http://challengebox.cs.umd.edu/2019/Fence).
 
-[show image]
+<img align="center" src="fancy-fence/img/fence-0.png" width="300"/>
+<img align="center" src="fancy-fence/img/fence-1.png" width="300"/>
+<img align="center" src="fancy-fence/img/fence-2.png" width="300"/>
+
+<img align="center" src="fancy-fence/img/final-fence.png" width="500"/>
+
 
 ## in-prime-shape
-Cryptography system on the basis of primes
+Cryptography system based on prime numbers.
