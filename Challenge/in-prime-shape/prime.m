@@ -1,5 +1,5 @@
 %{
- In prime shape
+   IN-PRIME-SHAPE
 
     Given a set P of primes, your cryptography system relies on the fact
     that there are lots of P-divisible numbers. 
@@ -10,20 +10,21 @@
  
 %}
 
+clc
 format long g
 tic;
 
+% set run parameters
 challenge = 1;
 test_num = '2'; % 0 1 or 2
 
-%{ 
-   Input text file
-    The first line contains the two numbers n and M, separated by a space.
-    This is followed by n lines, each containing a prime number
-    p1, p2, . . . , pn of P . You may assume they are distinct.
-%}
+
+%%%% ---- INPUT TEXT.IN FILE ---- %%%%
+%    The first line contains the two numbers n and M, separated by a space.
+%    This is followed by n lines, each containing a prime number
+%    p1, p2, . . . , pn of P . You may assume they are distinct.
 if(challenge == 0)
-    cd /Users/nick/Documents/GitHub/UMDChallengeBox/in-prime-shape
+    cd /Users/nick/Documents/GitHub/projects/Challenge/in-prime-shape
     file_name = strcat('data/prime-test', test_num, '.in');
     f = fopen(file_name,'r');    % input test
     
@@ -36,7 +37,7 @@ if(challenge == 0)
     fclose(f);
 else
     % execute challenge
-    cd /Users/nick/Documents/GitHub/UMDChallengeBox/in-prime-shape
+    cd /Users/nick/Documents/GitHub/projects/Challenge/in-prime-shape
     f = fopen('data/prime-challenge.in','r');    % input challenge
 
     % get variables
@@ -47,9 +48,11 @@ else
     % close file
     fclose(f);
 end
+fprintf('.in file imported\n')
+toc
 
 
-%   EXTRA INSTRUCTIONS
+%%%% ---- EXTRA INSTRUCTIONS ---- %%%%
 % Given P = {2, 5, 7} and M = 20, there are 10 P-divisible numbers that 
 %  do not exceed 20 (namely, 1, 2, 4, 5, 7, 8, 10, 14, 16, and 20).
 
@@ -58,10 +61,14 @@ end
 %  than the numbers of P.
 
 if(challenge == 0) % running a test
-    % run simple sieve method if testing
+    % Sieve method might be unnecessary... use MATLAB built-in function
+    %  primes() to get primes up to 'M'
+    p = primes(M);
+    
+    % run sieve method if testing
+    %{
     primes = 2:M;
     p = 2;
-
     % using sieve method
     while (p <= M)
         for i = 2*p:p:M
@@ -70,22 +77,26 @@ if(challenge == 0) % running a test
         p = p + 1;
     end
     primes = primes(primes > 0);
-else % run challenge
-    % sieve method takes too long for challenge, inputting primes from .txt
-    f = fopen('data/primes.txt','r');    % input primes
-    primes = fscanf(f, '%d');
-    primes(primes > M) = [];
+    %}
+else % running the challenge
+    % sieve method takes too long for challenge, input primes from .txt
+    f = fopen('data/primes.txt','r');    % input primes.txt
+    p = fscanf(f, '%d');
+    p(p > M) = [];
     fclose(f);
 end
+fprintf('primes determined up to M=%d\n', M)
+toc
 
-% remove 'P' from 'primes' making a list of bad multiples
-neg_P = setdiff(primes,P);
 
-% remove the multiples of 'neg_P' array from a 1:M array
-answer = [];
+% remove 'P' from 'p' making a list of bad multiples
+neg_P = setdiff(p,P);
 
-% cycle thru each possible value up to M and determine if it is a multiple
+% remove the multiples of 'neg_P' array from a 1:M array by...
+%  cycle thru each possible value up to M and determine if it is a multiple
 %  of any "bad" prime from 'neg_P'
+answer = [];
+n_answer = 0;
 for i = 1:M
     
     not_a_multiple = 0; % assume it isn't a multiple
@@ -100,18 +111,20 @@ for i = 1:M
     
     % save it to answer array if it was not marked
     if(not_a_multiple == 0)
-        answer = [answer i];
+        n_answer = n_answer + 1;
+        %answer = [answer i];
     end
     
 end
 
 % answer is the length of answer array, saved to text file
-length(answer)
-toc;
+%length(answer)
+fprintf('answer found! %d\n', n_answer)
+toc
 
 if(challenge == 0)
     % check answer to input.out file
-    file_name = strcat('data/prime-test', test_num, '.in');
+    file_name = strcat('data/prime-test', test_num, '.out');
     f = fopen(file_name,'r');
     
     % open and compare to txt file
@@ -128,7 +141,8 @@ else
     f = fopen('data/prime-challenge.out','w');
     
     % write answer
-    fprintf(f, '%d', length(answer));
+    %fprintf(f, '%d', length(answer));
+    fprintf(f, '%d', n_answer);
     
     % close output file
     fclose(f);
