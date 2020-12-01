@@ -1,6 +1,19 @@
 # General repository for random projects
 
 
+## Challenge
+University of Maryland Computer Science Northrop Grumman [Challenge Box](https://challengebox.cs.umd.edu/2019/index.html) (October 2019)
+
+| Challenges           |
+| -------------------- |
+| fancy-fence          |
+| in-prime-shape       |
+| moon-walk            |
+| nim-challenge        |
+| sleepy-employee      |
+| the-traveler         |
+
+
 ## CodeGolf
 Implementations of interesting [codegolf](https://codegolf.stackexchange.com) questions. Just looking to solve problems with no particular effort for length or efficiency.
 
@@ -45,6 +58,20 @@ Data science project analyzing data from iMessages.
 | chat.db        | database file of iMessage chats                 | Update messages                                |
 
 
+## OSRS
+Old School RuneScape skill bots.
+
+| File name      | Purpose                                         | Future improvements                            |
+| -------------- | ----------------------------------------------- | ---------------------------------------------- |
+| mining               | Folder saves mining information for the bot     |  N/A                                     |
+| mining_bot.py        | Bot for mining                                  | Recognize ores using cascade flow model  |
+| runecrafting         | Folder saves runecrafting information           | N/A                                      |
+| runecrafting_bot.py  | Bot for runecrafting                            | Currently, uses rigid clicking tools     |
+| tools.py             | tools class provides some common functions (calibration/orientation/drop_inventory) | expand based on the needs of the bots |
+| woodcutting          | Folder saves mining information for the bot     | N/A                                      |
+| woodcuttng_bot.py    | Bot for woodcutting (works best of all three)   | Recognize tree types with machine learning model     |
+
+
 ## Steps
 Data science project analyzing data from iPhone health app - month in NYC
 
@@ -61,4 +88,3 @@ Data science project analyzing data from iPhone health app - month in NYC
 | ----------- | ------------------------------------| ------------------------------------------------------------- |
 | sudoku.py   | Solves easy Sudoku puzzles (python) | Cannot handle 'nice loops.' Would benefit from a GUI too.     |
 | sudoku.m    | Solves all Sudoku puzzles (matlab)  | Two-method solver (backtracking included), GUI for easier use |
-
