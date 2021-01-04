@@ -58,20 +58,6 @@ Data science project analyzing data from iMessages.
 | chat.db        | database file of iMessage chats                 | Update messages                                |
 
 
-## OSRS
-Old School RuneScape skill bots.
-
-| File name      | Purpose                                         | Future improvements                            |
-| -------------- | ----------------------------------------------- | ---------------------------------------------- |
-| mining               | Folder saves mining information for the bot     |  N/A                                     |
-| mining_bot.py        | Bot for mining                                  | Recognize ores using cascade flow model  |
-| runecrafting         | Folder saves runecrafting information           | N/A                                      |
-| runecrafting_bot.py  | Bot for runecrafting                            | Currently, uses rigid clicking tools     |
-| tools.py             | tools class provides some common functions (calibration/orientation/drop_inventory) | expand based on the needs of the bots |
-| woodcutting          | Folder saves mining information for the bot     | N/A                                      |
-| woodcuttng_bot.py    | Bot for woodcutting (works best of all three)   | Recognize tree types with machine learning model     |
-
-
 ## Steps
 Data science project analyzing data from iPhone health app - month in NYC
 
